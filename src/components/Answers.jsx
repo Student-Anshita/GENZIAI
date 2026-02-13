@@ -1,0 +1,32 @@
+import React, { useEffect, useState } from "react";
+import { checkHeading, replaceHeadingStars } from "../Helper";
+
+const Answers = ({ ans, index, totalResult }) => {
+  const [heading, setHeading] = useState(false);
+  const [answer, setAnswer] = useState(ans);
+
+  useEffect(() => {
+    if (checkHeading(ans)) {
+      setHeading(true);
+      setAnswer(replaceHeadingStars(ans));
+    }
+  }, []);
+
+  return (
+    <>
+      {index == 0 && totalResult > 1 ? (
+        <span className={"py-2 text-xl block text-white"}>{answer}</span>
+      ) : heading ? (
+        <span
+          className={"py-2 text-lg block text-white"}
+        >
+          {answer}
+        </span>
+      ) : (
+        <span className="pl-5">{answer}</span>
+      )}
+    </>
+  );
+};
+
+export default Answers;
