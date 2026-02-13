@@ -39,7 +39,7 @@ function App() {
             </div>
             <div className="bg-zinc-800 w-1/2 text-white m-auto rounded-4xl border border-zinc-700 flex p-1 h-16 pr-5">
               <input type="text" value={question} onChange={(e)=> setQuestion(e.target.value)} placeholder="Hyy!! Ask me anything" className="w-full h-full p-3 outline-none"/>
-              <button onClick={askQuestion}>Ask</button>
+              <button onClick={askQuestion} className="bg-red-200">Ask</button>
             </div>
         </div>
       </div>
