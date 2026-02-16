@@ -23,7 +23,7 @@ const Answers = ({ ans, index, totalResult, type }) => {
           {answer}
         </span>
       ) : (
-        <span className={type=='q'? 'pl-1': 'pl-5'}>{answer}</span>
+        <span className={type=='q'? 'pl-1': 'pl justify-items-start-10 rounded-tl-3xl rounded-br-3xl rounded-bl-3xl'}>{answer}</span>
       )}
     </>
   );
