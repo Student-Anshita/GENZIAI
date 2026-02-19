@@ -1,6 +1,6 @@
 import React from "react";
 
-const RecentSearch = ({recentHistory, setRecentHistory}) => {
+const RecentSearch = ({recentHistory, setRecentHistory, setSelectedHistory}) => {
 
     
   const clearHistory = () => {
@@ -11,11 +11,11 @@ const RecentSearch = ({recentHistory, setRecentHistory}) => {
   return (
     <>
       <div
-        className="col-span-1 pt-3 bg-gradient-to-t from-[#1E0B4B] to-[#432277] border-r-2 border-purple-400/40
+        className="col-span-1 pt-3 dark:bg-zinc-800 bg-red-100 border-r-2 border-purple-400/40
   shadow-[0_8px_30px_rgba(67,34,119,0.6)]
   rounded-xl"
       >
-        <h1 className="text-xl text-white flex justify-center">
+        <h1 className="text-xl dark:text-white text-zinc-800 flex justify-center">
           <span>Recent Searches</span>
           <button onClick={clearHistory} className="cursor-pointer">
             <svg
@@ -35,7 +35,7 @@ const RecentSearch = ({recentHistory, setRecentHistory}) => {
               <li
               key={index}
                 onClick={() => setSelectedHistory(item)}
-                className="truncate text-zinc-300 p-1 pl-2 cursor-pointer hover:bg-zinc-700 hover:text-zinc-200"
+                className="truncate dark:text-zinc-300 text-zinc-900 p-1 pl-2 cursor-pointer hover:bg-zinc-700 hover:text-zinc-200"
               >
                 {item}
               </li>
